@@ -1,0 +1,25 @@
+.inputForm {
+  margin-bottom: 20px;
+}
+.input {
+  height: 40px;
+  width: 250px;
+  border-radius: 7px;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+
+.buttonSearch {
+  height: 45px;
+  border-radius: 7px;
+  background-color: tomato;
+  color: black;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonSearch:hover {
+  background-color: red;
+}

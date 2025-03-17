@@ -1,0 +1,14 @@
+.loadButton {
+  height: 40px;
+  border-radius: 7px;
+  background-color: tomato;
+  color: black;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loadButton:hover {
+  background-color: red;
+}
