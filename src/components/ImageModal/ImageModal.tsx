@@ -1,21 +1,31 @@
 import Modal from "react-modal";
 import css from "./ImageModal.module.css";
+import { Image } from "../../types";
 
 Modal.setAppElement("#root");
 
-const ImageModal = ({ isOpen, imageUrl, onRequestClose }) => {
+interface ImageModalProps {
+  isOpen: boolean;
+  image: Image;
+  onRequestClose: () => void;
+}
+
+const ImageModal: React.FC<ImageModalProps> = ({
+  isOpen,
+  image,
+  onRequestClose,
+}) => {
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      contentLabel="Image Modal"
+      shouldCloseOnOverlayClick={true}
       className={css.Modal}
       overlayClassName={css.Overlay}
     >
       <img
-        src={imageUrl}
-        alt="Large view"
-        width={300}
+        src={image.urls.regular}
+        alt={image.alt_description}
         className={css.modalImage}
       />
     </Modal>
